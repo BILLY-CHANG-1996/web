@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>大哥大使用意見調查表</title>
+	</head>
+	<body background = "mobi10.jpg">
+	<p> <img src = "mobi11.jpg"> </p>
+	<form method = "post" action = "confirm.php">
+		姓 &nbsp;&nbsp;&nbsp;名:<input type = "text" name = "UserName" size = "40"<br>
+		E-Mail:<input type = "text" name = "UserMail" size = "40" value = "username@mailserver" <br>
+		年 &nbsp;&nbsp;齡:
+		<input type = "radio"name = "UserAge" value = "Age1"> 未滿20歲
+		<input type = "radio"name = "UserAge" value = "Age2"> checked >20~29
+		<input type = "radio"name = "UserAge" value = "Age3">30~39
+		<input type = "radio"name = "UserAge" value = "Age4">40~49
+		<input type = "radio"name = "UserAge" value = "Age5">50歲以上<br>
+		<input type = "checkbox"name = "UserPhone[]" value = "htc"> htc
+		<input type = "checkbox"name = "UserPhone[]" value = "Apple"> Apple
+		<input type = "checkbox"name = "UserPhone[]" value = "Moto"> Moto
+		<input type = "checkbox"name = "UserPhone[]" value = "Nokia"> Nokia<br>
+		您使用手機時最常碰到那些問題? <br>
+		<textarea name = "UserTrouble" cols = "45" rows = "4"> 連線速度不夠快 </textarea><br>
+		您使用過哪家業者的門號? (可複選)
+		<select name = "UserNumber[]" size = "4" multiple>
+			<option value = "中華電信">中華電信
+			<option value = "台灣大哥大">台灣大哥大
+			<option value = "遠傳">遠傳
+			<option value = "威寶">威寶
+		</select><br>
+		<input type = "submit" value = "提交">
+		<input type = "reset" value = "重新輸入">
+	</form>
+</body>
+</html>

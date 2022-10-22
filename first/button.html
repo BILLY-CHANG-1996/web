@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>大哥大使用意見調查表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<style>
+			a:link {color:black}
+			a:visited{color:green}
+			a:hover{color:blue}
+			a:focus{color:red}
+			a:active{color:yellow}
+		</style>
+	</head>
+	<body background = "mobi10.jpg">
+	<div class="container-fluid">
+	<p> <img class = "img-responsive" src = "121655hbr.jpg"> </p>
+	<form method = "post" action = "confirm.php">
+		<fieldset>
+			<legend>個人資料</legend>
+		姓 &nbsp;&nbsp;&nbsp;名:<input type = "text" name = "UserName" size = "40"<br>
+		E-Mail:<input type = "text" name = "UserMail" size = "40" value = "username@mailserver" <br>
+		年 &nbsp;&nbsp;齡:
+		</fieldset>
+		<fieldset>
+		<input type = "radio"name = "UserAge" value = "Age1"> 未滿20歲
+		<input type = "radio"name = "UserAge" value = "Age2"> checked >20~29
+		<input type = "radio"name = "UserAge" value = "Age3">30~39
+		<input type = "radio"name = "UserAge" value = "Age4">40~49
+		<input type = "radio"name = "UserAge" value = "Age5">50歲以上<br>
+		</fieldset>
+		<fieldset>
+		<legend>您使用過那些廠牌的手機?</legend>
+		<input type = "checkbox"name = "UserPhone[]" value = "htc"> htc
+		<input type = "checkbox"name = "UserPhone[]" value = "Apple"> Apple
+		<input type = "checkbox"name = "UserPhone[]" value = "Moto"> Moto
+		<input type = "checkbox"name = "UserPhone[]" value = "Nokia"> Nokia<br>
+		</fieldset>
+		</fieldset><br>
+		<fieldset>
+		<legend>您使用手機時最常碰到那些問題?</legend> <br>
+		
+		<textarea name = "UserTrouble" cols = "45" rows = "4"> 連線速度不夠快 </textarea><br>
+		</fieldset>
+		<fieldset>
+		您使用過哪家業者的門號? (可複選)
+		<select name = "UserNumber[]" size = "4" multiple>
+			<option value = "中華電信">中華電信
+			<option value = "台灣大哥大">台灣大哥大
+			<option value = "遠傳">遠傳
+			<option value = "威寶">威寶
+		</select><br>
+		</fieldset>
+		<input type = "submit" value = "提交">
+		<input type = "reset" value = "重新輸入">
+		<u1>
+			<li><a href = "ar.html">射鵰英雄傳</li>
+			<li><a href = "novel1.html">神鵰俠侶</li>
+			<li><a href = "novel1.html">倚天屠龍記</li>
+			<li><a href = "novel1.html">碧血劍</li>
+		<div class = "row">
+		<div class = "col-sm3" style = "background-color:lavender;">sm3欄</div>
+		<div class = "col-sm9" style = "background-color:lavenderblush;">sm9欄</div>
+		<h1 class = "visible-xs">此文字顯示於極小螢幕</h1>
+		<h1 class = "visible-sm">此文字顯示於小螢幕</h1>
+		<h1 class = "visible-md">此文字顯示於中螢幕</h1>
+		<h1 class = "visible-lg">此文字顯示於大螢幕</h1>
+		<nav class = "navbar navbar-inverse">
+		<div class "navbar-header">
+		<a class = "navbar-brand" href = "http://www.pu.edu.tw">靜宜大學</a>
+		</div>
+		<div>
+		<ul class = "nav navbar-nav">
+		<li class = "active"> <a href = "http://www1.pu.edu.tw/~tcyang">楊子青</a></li>
+		<li><a href = "#">Page 1</a></li>
+		<li><a href = "#">Page 2</a></li>
+		<li><a href = "#">Page 3</a></li>
+			
+		
+		</div>
+		</u1>
+	</form>
+</div>		
+</body>
+</html>
