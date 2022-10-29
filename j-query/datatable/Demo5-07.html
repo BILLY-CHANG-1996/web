@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="Text/Css">
+        .iOver {
+            background-Color: yellow;
+            color: blue;
+        }
+
+        .iOut {
+            background-Color:;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        X：<input type="text" id="txtX" name="txtX" value="" /><br />
+        Y：<input type="text" id="txtY" name="txtY" value="" /><br />
+        <span id="disp">span</span>
+    </form>
+
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).mousemove(function (e) {
+                $(':input[name="txtX"]').val(e.pageX);
+                $(':input[name="txtY"]').val(e.pageY);
+                return true;
+            });
+            $(':input').mouseover(function () {
+                $('#disp').text($(this).attr('name'));
+            });
+
+        });
+    </script>
+
+</body>
+</html>

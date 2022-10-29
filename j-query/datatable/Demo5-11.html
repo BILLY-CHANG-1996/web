@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="Text/Css">
+        .slt {
+            background-Color: yellow;
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        <input type="text" id="txt1" name="txt1" value=""><br>
+        <input type="text" id="txt2" name="txt2" value=""><br>
+        <input type="text" id="txt3" name="txt3" value=""><br>
+        <input type="submit" id="submit1" name="submit1" value="submit">
+        <hr>
+        <span id="span1"></span>
+
+
+    </form>
+
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#form1').submit(function () {
+                var chk = true;
+                $('#span1').html('');
+                $('#form1 :input:not("submit1")').each(function () {
+                    var tt = $(this).val();
+                    if (tt == '') {
+                        //alert(tt);	
+                        $('#span1').append('<p>請輸入' + $(this).attr('name') + '的值！！</p>');
+                        //alert('請輸入' + $(this).attr('name') + '的值！！');
+                        $(this).focus();
+                        chk = false;
+                    }
+                });
+                return chk;
+            });
+
+        });
+    </script>
+
+</body>
+</html>

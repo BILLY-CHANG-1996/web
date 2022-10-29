@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .myOdd {
+            background-Color: pink;
+        }
+
+        .myEven {
+            background-Color: Yellow;
+        }
+
+        .myEq {
+            background-Color: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="Button" id="btn1" name="btn1" value="選取Contains('BB')的Tr" /><br />
+    <input type="Button" id="btn2" name="btn2" value="選取非has(th)" /><br />
+    <input type="Button" id="btn3" name="btn3" value="無內容Empty" /><br />
+    <hr />
+    <table border="1">
+        <tr>
+            <th>AA</th>
+            <th>2,1</th>
+            <th>3,1</th>
+            <th>4,1</th>
+            <th>5,1</th>
+            <td></td>
+        </tr>
+        <tr>
+            <td>BB</td>
+            <td>2,2</td>
+            <td>3,2</td>
+            <td>4,2</td>
+            <td>5,2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>CC</td>
+            <td>2,3</td>
+            <td>3,3</td>
+            <td>4,3</td>
+            <td>5,3</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>DD</td>
+            <td>2,4</td>
+            <td>3,4</td>
+            <td>4,4</td>
+            <td>5,4</td>
+            <td></td>
+        </tr>
+    </table>
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            //選取Contains('BB')的Tr
+            $('#btn1').click(function () {
+                //contains : 文字
+                $('tr:contains("BB")').addClass('myEven');
+            });
+
+            //選取非has(th)
+            $('#btn2').click(function () {
+                //has : 物件(element)
+                $('tr:not(:has(th))').addClass('myEven');
+            });
+
+            //無內容Empty
+            $('#btn3').click(function () {
+                $('td:empty').html('N/A');
+            });
+
+        });
+    </script>
+
+</body>
+</html>

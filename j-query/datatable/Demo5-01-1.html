@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <input type="button" id="btn1" value="只綁訂一次的事件，只有按一次有效" />
+    <input type="button" id="btn2" value="可以好幾次" />
+    <hr />
+    <div id="div1"></div>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn1').one('click', function () {
+                $('#div1').append('一次<br>');
+            });
+            $('#btn2').click(function () {
+                $('#div1').append('好幾次<br>');
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="Text/Css">
+        .iOver {
+            background-Color: yellow;
+            color: blue;
+        }
+
+        .iOut {
+            background-Color:;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        Width：<input type="text" id="txtW" name="txtW" value="" /><br />
+        Height：<input type="text" id="txtH" name="txtH" value="" /><br />
+        <span id="disp">span</span>
+    </form>
+
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //	$(window).one('resize',function(){
+            //		alert('改變了視窗的大小');
+            //	});
+            $(window).resize(function () {
+                $('#txtW').val($(this).width());
+                $('#txtH').val($(this).height());
+            });
+
+        });
+    </script>
+
+</body>
+</html>

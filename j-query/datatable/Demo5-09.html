@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="Text/Css">
+        .iOver {
+            background-Color: yellow;
+            color: blue;
+        }
+
+        .iOut {
+            background-Color:;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        <div id="div1" style="position: absolute; left: 372px; top: 87px; width: 94px; height: 39px;">
+            我是div1
+            <input type="text" id="txt1" name="txt1" value="">
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </form>
+
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            var divOffset = $('#div1').offset();
+            $(window).scroll(function (e) {
+                $('#txt1').val($(this).scrollTop());
+                $('#div1').css('top', divOffset.top + $(this).scrollTop() + 'px');
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="Text/Css">
+        .slt {
+            background-Color: yellow;
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        <input type="text" id="txt1" name="txt1" value="">
+    </form>
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#txt1').select(function () {
+                $(this).addClass('slt');
+            });
+            $('#txt1').click(function () {
+                $(this).removeClass('slt');
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <input type="button" id="btn1" value="each appen陣列內容" />
+    <hr />
+    <div id="div1">我是div1</div>
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn1').click(function () {
+                var stations = ['台北', '板橋', '桃園', '新竹', '台中', '嘉義', '台南', '高雄'];
+                $.each(stations, function () {
+                    $('#div1').append('<p>' + this + '</p>');
+                });
+
+            });
+        });
+    </script>
+</body>
+</html>

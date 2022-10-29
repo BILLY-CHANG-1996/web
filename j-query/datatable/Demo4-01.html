@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <input type="button" id="btn1" value="each示範：設定每個P的內容" />
+    <hr />
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+    <p>我是p</p>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn1').click(function () {
+                var i = 0;
+                $('p').each(function () {
+                    i = i + 1;
+                    $(this).html('我是p' + i);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

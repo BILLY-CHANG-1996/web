@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <input type="hidden" id="idx" name="idx" value="0" />
+    <table>
+        <thead>
+            <tr>
+                <th>處理</th>
+				<th>加總</th>
+                <th>Uid</th>
+                <th>UName</th>
+                <th>UTel</th>
+                <th>UPhone</th>
+				<th>Sum_</th>
+            </tr>
+        </thead>
+        <tbody id="tbd">
+            <tr subid="EditZone">
+                <td><input type="button" id="btnAdd" name="btnAdd" value="新增"></td>
+				<td><input type = "button" id = "txtsum" name = "txtsum" value = "加總"></td>
+                <td><input type="textbox" subid="txt" id="txtUid" name="txtUid" value=""></td>
+                <td><input type="textbox" subid="txt" id="txtUName" name="txtUName" value=""></td>
+                <td><input type="textbox" subid="txt" id="txtUTel" name="txtUTel" value=""></td>
+                <td><input type="textbox" subid="txt" id="txtUPnone" name="txtUPnone" value=""></td>
+				<td><input type="textbox" subid="txt" id="Sum_" name="" value=""></td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="div1"></div>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+			$('#txtsum').click(function(){
+				var cal = parseInt($("#txtUid").val(),10) + parseInt($("#txtUName").val(),10);
+				$("#Sum_").val(cal);
+			})
+            $('#btnAdd').click(function () {
+                //複製一份出來
+                var tt = $('#tbd tr[subid="EditZone"]').clone();
+
+                //取得DataZone的個數
+                var dzcnt = $('#idx').val();
+                var NewIndex = parseInt(dzcnt, 10) + 1;
+                $('#idx').val(NewIndex);
+
+                //修改subid
+                $(tt).attr('subid', 'DataZone');
+                $(tt).attr('subid2', 'DataZone' + NewIndex);
+
+                //修改按鈕id,name,value,bind click事件
+                $('#btnAdd', tt)
+                    .attr('id', 'btnDel' + NewIndex)
+                    .attr('value', '刪除')
+                    .attr('subindex', NewIndex)
+                    .bind('click', rDel);
+
+                //加入複製出來的項目
+                $('#tbd').append(tt);
+
+                //$('#div1').text(tt.html());
+
+                //清除EditZone裡面的input value
+                $('#tbd tr[subid="EditZone"] [subid="txt"]').val('');
+				
+
+            });
+        });
+		
+		
+		
+        function rDel() {
+            //var o=window.event.srcElement;
+            var xidx = $(this).attr('subindex');
+            alert(xidx);
+            $('tr[subid2="DataZone' + xidx + '"]').remove();
+        }
+
+    </script>
+</body>
+</html>

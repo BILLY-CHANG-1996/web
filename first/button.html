@@ -3,6 +3,21 @@
 	<head>
 		<meta charset = "utf-8">
 		<title>大哥大使用意見調查表</title>
+		<script language = "javascript">
+			var text = "";
+			var total = 0;
+			for(var i = 1;i <= 9;i ++){
+				for(var j = 1;j <= 9;j++){
+					total = i * j;
+					text = i + "*" + j + " = " + total + "<br>";
+					console.log(text);
+					window.document.write(text);
+				}
+				window.document.write("<br>");
+			}
+			
+			
+		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
@@ -14,9 +29,7 @@
 			a:focus{color:red}
 			a:active{color:yellow}
 		</style>
-		<script language = "javascript">
-			alert<"hello world">;
-		</script>
+		
 	</head>
 	<body background = "mobi10.jpg">
 	<div class="container-fluid">

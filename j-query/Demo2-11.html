@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .d1 {
+            background-color: red;
+            color: green;
+        }
+
+        .d2 {
+            background-color: orange;
+            color: blue;
+        }
+
+        .d3 {
+            background-color: yellow;
+            color: blue;
+        }
+
+        .d4 {
+            background-color: green;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btn1" name="btn1" value="依照Enabled/disabled改變顏色" /><br />
+    <input type="button" id="btn2" name="btn2" value="改變Enabled/Disabled狀態" /><br />
+    <hr />
+    <input type="text" id="txt1" value="" />
+    <input type="text" id="txt2" value="" disabled />
+    <hr />
+    <input type="button" value="鎖住已經勾選的" id="btn3" name="btn3" />
+    <input type="checkbox" id="checkbox1" name="checkbox1" />
+    <input type="checkbox" id="checkbox2" name="checkbox2" />
+    <input type="checkbox" id="checkbox3" name="checkbox3" />
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            //依照Enabled/disabled改變顏色
+            $('#btn1').click(function () {
+                $(':text:enabled').addClass('d1');
+                $(':text:disabled').addClass('d2');
+            });
+
+            //改變Enabled/Disabled狀態
+            $('#btn2').click(function () {
+                $('input:enabled').attr({ disabled: "disabled" });
+            });
+
+            //鎖住已經勾選的
+            $('#btn3').click(function () {
+                $('input:checked').attr({ disabled: "disabled" });
+            });
+
+        });
+    </script>
+
+</body>
+</html>

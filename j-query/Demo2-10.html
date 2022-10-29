@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .st1 {
+            background-Color: pink;
+        }
+
+        .st2 {
+            background-Color: Yellow;
+        }
+
+        .st3 {
+            background-Color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" method="post" id="form1" name="form1">
+
+        <input type="Button" id="btn1" name="btn1" value="input" /><br />
+        <input type="Button" id="btn2" name="btn2" value="text" /><br />
+        <input type="Button" id="btn3" name="btn3" value="Password" /><br />
+        <input type="Button" id="btn4" name="btn4" value="textarea" /><br />
+        <input type="Button" id="btn5" name="btn5" value="checkbox" /><br />
+        <input type="Button" id="btn6" name="btn6" value="radio" /><br />
+        <input type="Button" id="btn7" name="btn7" value="image" /><br />
+        <hr />
+        text:<input type="text" id="txt1" name="txt1" /><br />
+        password:<input type="password" id="password1" name="password1"><br />
+        checkbox:<input type="checkbox" id="checkbox1" name="checkbox1" value="chkbox"><br />
+        radio:<input type="radio" id="radio1" name="radio1" value="rdo"><br />
+        <input type="image" id="btnimg" src="topcat.jpg" />
+        <hr />
+        <textarea id="ta1" name="ta1" cols="20" rows="10">TextArea</textarea>
+    </form>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn1').click(function () {
+                $(':input').addClass('st1');
+            });
+            $('#btn2').click(function () {
+                $(':text').addClass('st1');
+            });
+            $('#btn3').click(function () {
+                $(':password').addClass('st1');
+            });
+            $('#btn4').click(function () {
+                $('textarea').addClass('st1');
+            });
+            $('#btn5').click(function () {
+                //$(':checkbox').addClass('st1');
+                alert($(':checkbox').val());
+            });
+            $('#btn6').click(function () {
+                //$(':radio').addClass('st1');
+                alert($(':radio').val());
+            });
+            $('#btn7').click(function () {
+                $(':image').toggle();
+            });
+        });
+    </script>
+</body>
+</html>

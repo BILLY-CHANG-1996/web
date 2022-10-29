@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    1,9,3,8,6,1,5,9,4,7,3,8,6,9,1<br>
+    <input type="text" id="txt1" name="txt1" value=""><br>
+    <input type="button" id="btn1" name="btn1" value="示範join" />
+    <input type="button" id="btn2" name="btn2" value="示範grep,取大於等於4且不等於6">
+    <hr />
+    <div id="div1">我是div1</div>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            var nums = [1, 9, 3, 8, 6, 1, 5, 9, 4, 7, 3, 8, 6, 9, 1];
+            $('#btn1').click(function () {
+                //$('#div1').append('<p>' + nums.join('|') + '</p>');
+                $('#div1').append('<p>' + nums.join($('#txt1').val()) + '</p>');
+            });
+            $('#btn2').click(function () {
+                var arr = $.grep(nums, function (n, i) {
+                    return (n >= 4 && n != 6)
+                });
+                $('#div1').append('<p>' + arr.join(',') + '</p>');
+            });
+
+        });
+    </script>
+</body>
+</html>

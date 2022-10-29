@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        <div id="div1">
+            blur<br />
+            姓名：<input type="text" id="txtName" name="txtName" value="" /><br />
+            密碼：<input type="password" id="txtPassword" name="txtPassword" value="" /><br />
+            <span id="span1"></span>
+        </div>
+        <hr />
+        <div id="div2">
+            change:<br />
+            姓名：<input type="text" id="txtName2" name="txtName2" value="" /><br />
+            密碼：<input type="password" id="txtPassword2" name="txtPassword2" value="" /><br />
+            <span id="span2"></span>
+        </div>
+    </form>
+
+
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#div1 input').bind('blur', function () {
+                $('#span1').html($(this).attr('name') + '=' + $(this).val());
+            });
+            $('#div2 input').bind('change', function () {
+                $('#span2').html($(this).attr('name') + '=' + $(this).val());
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <input type="button" id="btn1" name="btn1" value="使用append" /><br>
+    <input type="button" id="btn2" name="btn2" value="使用appendTo"><br>
+    <input id="btn3" type="button" value="取得div1的html" />
+    <hr />
+    <input type="text" id="txt1" name="txt1" value="我是txt1"><br>
+    <div id="div1"><p>我是div1</p></div>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            var tt = $('<a/>').attr('href', 'http://tw.yahoo.com').attr('target', '_blank').text('yahoo');
+            //使用append
+            $('#btn1').click(function () {
+                $('#div1').append(tt);
+            });
+
+            //使用appendTo
+            $('#btn2').click(function () {
+                tt.appendTo($('#div1'));
+            });
+
+            //顯示div1內的html
+            $('#btn3').click(function () {
+                alert($('#div1').html());
+            });
+        });
+    </script>
+</body>
+</html>

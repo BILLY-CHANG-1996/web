@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="Text/Css">
+        .iOver {
+            background-Color: yellow;
+            color: blue;
+        }
+
+        .iOut {
+            background-Color: white;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        <div>這是第1個div</div>
+        <div>這是第2個div</div>
+        <div>這是第3個div</div>
+        <div>這是第4個div</div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>aaa</th>
+                    <th>aaa</th>
+                    <th>aaa</th>
+                </tr>
+            </thead>
+            <tbody id="myBd">
+                <tr>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                </tr>
+                <tr>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                </tr>
+                <tr>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                </tr>
+                <tr>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                </tr>
+                <tr>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                    <td>dddd</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div').hover(
+                    function () {
+                        $(this).addClass('iOver');
+                    },
+                    function () {
+                        $(this).removeClass('iOver');
+                        //$(this).addClass('iOut');
+                    }
+                );
+            $('#myBd tr').hover(
+                function () {
+                    $(this).addClass('iOver');
+                }
+            ,
+                function () {
+                    $(this).removeClass('iOver');
+                }
+            );
+
+        });
+    </script>
+
+</body>
+</html>

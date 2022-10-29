@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <input type="button" id="btn1" name="btn1" value="取得html" /><br>
+    <input type="button" id="btn2" name="btn2" value="設定html"><br>
+    <input type="button" id="btn3" name="btn3" value="取得val"><br>
+    <input type="button" id="btn4" name="btn4" value="設定val"><br>
+    <input type="button" id="btn5" name="btn5" value="取得text"><br>
+    <input type="button" id="btn6" name="btn6" value="設定text"><br>
+
+    <hr />
+    <input type="text" id="txt1" name="txt1" value="我是txt1"><br>
+    <div id="div1"><p>我是div1</p></div>
+
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            var div1 = $('#div1');
+            var txt1 = $('#txt1');
+            //取得html
+            $('#btn1').click(function () {
+                alert(div1.html());
+            });
+
+            //設定html
+            $('#btn2').click(function () {
+                div1.html('<b><i>我改了html</i></b><br />我不在i裡面');
+            });
+
+            //取得val
+            $('#btn3').click(function () {
+                alert(txt1.val());
+            });
+            //設定val
+            $('#btn4').click(function () {
+                txt1.val('我修改了val');
+            });
+
+            //取得text
+            $('#btn5').click(function () {
+                alert(div1.text());
+            });
+
+            //設定text
+            $('#btn6').click(function () {
+                //從div1裡面取得i物件，並修改其text
+                $('i', div1).text('我修改了text內容');
+            });
+        });
+    </script>
+</body>
+</html>

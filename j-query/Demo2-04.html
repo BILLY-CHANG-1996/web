@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .first {
+            background-Color: blue;
+            color: yellow;
+        }
+
+        .last {
+            background-Color: yellow;
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="Button" id="btn1" name="btn1" value="測試First Tr" />
+    <br />
+    <input type="Button" id="btn2" name="btn2" value="測試First Td" />
+    <br />
+    <input type="Button" id="btn3" name="btn3" value="測試Last Tr" />
+    <br />
+    <input type="Button" id="btn4" name="btn4" value="測試Last Td" />
+    <br />
+    <input type="Button" id="btn5" name="btn5" value="測試Not First Tr" />
+    <br />
+    <hr />
+    <table border="1">
+        <tr>
+            <td>1,1</td>
+            <td>2,1</td>
+            <td>3,1</td>
+            <td>4,1</td>
+            <td>5,1</td>
+        </tr>
+        <tr>
+            <td>1,2</td>
+            <td>2,2</td>
+            <td>3,2</td>
+            <td>4,2</td>
+            <td>5,2</td>
+        </tr>
+        <tr>
+            <td>1,3</td>
+            <td>2,3</td>
+            <td>3,3</td>
+            <td>4,3</td>
+            <td>5,3</td>
+        </tr>
+    </table>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn1').click(function () {
+                $('tr:first').removeClass();
+				$('tr:last').removeClass();
+                $('tr:first').addClass('first');
+            });
+            $('#btn2').click(function () {
+                $('td:first').removeClass();
+                $('td:first').addClass('first');
+            });
+            $('#btn3').click(function () {
+                $('tr:last').removeClass();
+                $('tr:last').addClass('last');
+            });
+            $('#btn4').click(function () {
+                $('td:last').removeClass();
+                $('td:last').addClass('last');
+            });
+            $('#btn5').click(function () {
+                $('tr:not(:first)').removeClass();
+                $('tr:not(:first)').addClass('first');
+            });
+        });
+    </script>
+</body>
+</html>

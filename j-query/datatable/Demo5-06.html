@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="Text/Css">
+        .iOver {
+            background-Color: yellow;
+            color: blue;
+        }
+
+        .iOut {
+            background-Color:;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        姓名：<input type="text" id="txtName" name="txtName" value="" /><br />
+        暱稱：<input type="text" id="txtNickName" name="txtNickName" value="" /><br />
+        <span id="disp">span</span>
+
+    </form>
+
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //輸入項點選時，改變顏色
+            $(':input').mousedown(function () {
+                $(this).removeClass();
+                $(this).addClass('iOver');
+            });
+            //輸入像失去focus時，移除顏色
+            $(':input').blur(function () {
+                $(this).removeClass();
+            });
+
+        });
+    </script>
+
+</body>
+</html>

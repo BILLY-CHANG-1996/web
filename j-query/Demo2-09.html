@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .st1 {
+            background-Color: pink;
+        }
+
+        .st2 {
+            background-Color: Yellow;
+        }
+
+        .st3 {
+            background-Color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="Button" id="btn1" name="btn1" value="nth-child" /><br />
+    <input type="Button" id="btn2" name="btn2" value="first-child" /><br />
+    <input type="Button" id="btn3" name="btn3" value="last-child" /><br />
+    <input type="Button" id="btn4" name="btn4" value="only-child" /><br />
+    <hr />
+    <ul>
+        <li>Yahoo</li>
+        <li>Google</li>
+        <li>YouTube</li>
+    </ul>
+    <ul>
+        <li>Link1</li>
+        <li>Link2</li>
+        <li>Link3</li>
+    </ul>
+    <ul>
+        <li>Link1</li>
+    </ul>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+
+            //nth-child
+            $('#btn1').click(function () {
+                $('ul li:nth-child(2)').addClass('st1');
+                $('ul li:not(:nth-child(2))').addClass('st2');
+            });
+
+            //first-child
+            $('#btn2').click(function () {
+                $('ul li:first-child').addClass('st1');
+            });
+
+            //last-child
+            $('#btn3').click(function () {
+                $('ul li:last-child').addClass('st2');
+            });
+
+            //only-child
+            $('#btn4').click(function () {
+                $('ul li:only-child').addClass('st3');
+            });
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="Text/Css">
+        .slt {
+            background-Color: yellow;
+            color: blue;
+        }
+
+        .d1 {
+            background-color: red;
+        }
+
+        .d2 {
+            background-color: yellow;
+        }
+
+        .d3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method=POST id=form1 name=form1>
+        <input type="button" id="btn1" name="btn1" value="btn1"><br>
+        <input type="button" id="btn2" name="btn2" value="btn2"><br>
+        <input type="submit" id="submit1" name="submit1" value="submit">
+        <hr>
+        <div id="div1">
+            我是div1<br>
+            我是div1<br>
+            我是div1<br>
+            我是div1<br>
+            我是div1<br>
+            我是div1<br>
+            我是div1<br>
+            我是div1<br>
+            我是div1<br>
+            我是div1<br>
+        </div>
+    </form>
+
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                $('#div1').toggle();
+            });
+
+
+            //舊版本才支援
+            // 1.8不建議使用,1.9被拿掉
+            //
+            //$('#btn2').toggle(function () {
+            //    $('#div1').css("background-color", "green");
+            //},
+            //function () {
+            //    $('#div1').css("background-color", "red");
+            //},
+            //function () {
+            //    $('#div1').css("background-color", "yellow");
+            //});
+
+        });
+
+
+
+    </script>
+
+</body>
+</html>
